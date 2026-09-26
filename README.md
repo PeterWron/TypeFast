@@ -21,7 +21,7 @@ run_typefast.bat start       :: 一键启动：服务（自动判断麦克风）
 run_typefast.bat transcribe 音频文件 :: 转写音频文件（mp3 / wav / m4a），输出文字
 ```
 建议顺序：`doctor` 通过后再 run。第一次 run 会弹系统麦克风权限。
-（不用那么费劲，github直接丢给agent执行即可）
+（不用那么费劲，github链接直接丢给agent执行即可）
 
 ## 麦克风（真实语音输入）
 
