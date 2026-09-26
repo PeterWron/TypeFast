@@ -2,7 +2,7 @@
 
 # TypeFast 0.1.0
 
-写在最前面，本项目完全使用DeepSeek和Codex完成Vibe Coding，感谢硅基流动提供的免费大模型，我测试的是中国电信 XingChenAGI/XingChenASR-V3.2-Ultra 语音模型（前排广告位招商）。
+写在最前，本项目完全使用DeepSeek和Codex完成Vibe Coding，感谢硅基流动的免费模型，测试的是中国电信 XingChenAGI/XingChenASR-V3.2-Ultra 语音模型****（前排广告位招商）****。
 
 Windows 上的 AI 语音输入法（云优先）：按住热键说话，松开后文字已经整理好并落在光标处。
 
@@ -21,7 +21,7 @@ run_typefast.bat start       :: 一键启动：服务（自动判断麦克风）
 run_typefast.bat transcribe 音频文件 :: 转写音频文件（mp3 / wav / m4a），输出文字
 ```
 建议顺序：`doctor` 通过后再 run。第一次 run 会弹系统麦克风权限。
-（不用那么费劲，github链接直接丢给agent执行即可）
+**（不用那么费劲，github链接直接丢给agent执行即可）**
 
 ## 麦克风（真实语音输入）
 
@@ -34,11 +34,11 @@ python tools/mic_probe.py    :: 列出所有输入设备，并逐个试开 16k /
 python tools/mic_check.py    :: 录 2 秒，打印选中设备、实际采样率与峰值，末尾给 RESULT: OK / FAIL
 ```
 
-2026-09-26 本机实测（USB 麦克风 aigo K11/K12）"又一个广告位"
+2026-09-26 本机实测（USB 麦克风 aigo K11/K12）**"又一个广告位"**
 
 ## 依赖
 
-完整清单见 requirements.txt。
+完整清单见 requirements.txt
 
 ## 目录结构
 
@@ -113,7 +113,7 @@ run_typefast.bat `doctor` 确认密钥与 provider 就位。
 
 ## 许可
 
-总花费约10 RMB，请任意下载使用，作者不差这10块。
+总花费约10 RMB，请任意下载使用。**不差这10块，差的不是这10块**
 
 ## 默认模型：硅基流动（SiliconFlow）
 
@@ -125,13 +125,8 @@ run_typefast.bat `doctor` 确认密钥与 provider 就位。
 
 ## 转写音频文件
 
-```
-cd E:/py/typefast/src
-python -m typefast transcribe E:\py\typefast\voice_test\testvoice.mp3
-```
-
 任意格式（mp3 / m4a / wav / flac）先经 ffmpeg 解码成 16k 单声道，再用与实时链路**同一套**分段策略切成若干段并行识别，最后润色，结果同时写到 数据目录/records/last_transcript.txt（数据目录默认是项目内的 data/，可用 TYPEFAST_DATA 改）。
 
-离线批量没有实时延迟压力，所以这条路径给润色的预算放宽到至少 8 秒（实时路径仍是 1500ms 硬截止）。实测 25 秒音频：4 段并行识别 3.6s + 润色 2.0s。
+实测 25 秒音频：4 段并行识别 3.6s + 润色 2.0s。
 
-## 作者：西二环金融狗
+## 作者：西二环搬砖狗
