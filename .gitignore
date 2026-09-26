@@ -1,0 +1,33 @@
+# TypeFast-local state
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# secrets / local state
+.env
+config.local.json
+config.json
+logs/
+recordings/
+models/
+*.log
+
+
+# editor / os
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+
+# 本地测试音频
+voice_test/
+
+# 项目内数据目录（日志与记录）
+data/

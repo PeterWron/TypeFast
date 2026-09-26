@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "###替换成你的api": "API Key 不写进这个文件（密钥一律存 Windows 凭据管理器）：typefast key set siliconflow_api_key \"###替换成你的api\"（润色用 polish_api_key）",
+  "asr": {"provider": "siliconflow", "model": "XingChenAGI/XingChenASR-V3.2-Ultra", "endpoint": "", "language": "zh-en"},
+  "polish": {"provider": "openai_compat", "model": "Qwen/Qwen2.5-7B-Instruct", "endpoint": "https://api.siliconflow.cn/v1/chat/completions", "enabled": true, "temperature": 0.1, "max_tokens": 2000, "deadline_ms": 1500, "short_text_chars": 10},
+  "router": {"mode": "quality", "quality_chain": [], "speed_chain": []},
+  "hotkey": {"hold": "right_ctrl", "cancel": "esc", "mouse_middle": true},
+  "audio": {"sample_rate": 16000, "input_device": "", "preroll_ms": 300, "keep_warm": true, "normalize": true},
+  "segment": {"target_commit_s": 5.0, "min_commit_s": 5.0, "live_margin_s": 1.2, "search_radius_s": 2.0, "min_pause_s": 0.30, "max_inflight": 3, "live_commit": true},
+  "delivery": {"paste_threshold_chars": 30, "restore_clipboard": true, "strip_chat_trailing_period": true},
+  "privacy": {"keep_audio": false, "exclude_apps": ["keepass.exe", "1password.exe"], "block_password_fields": true}
+}
